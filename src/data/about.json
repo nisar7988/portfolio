@@ -1,0 +1,23 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["React", "Next.js", "Bootstrap", "Tailwind CSS", "HTML5/CSS3"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "MongoDB", "MySql", "RESTful APIs"]
+    },
+    {
+      "category": "Tools",
+      "items": ["Git","Github","CI/CD",  "Firebase", "VS Code"]
+    }
+  ],
+  "profile": {
+    "name": "Nisar Ahmed",
+    "role": "Full Stack Developer",
+    "location": "India",
+    "experience": "3+ years"
+  },
+  "description": "I am a passionate Full Stack Developer with a deep love for creating elegant, efficient solutions to complex problems. With expertise in both frontend and backend technologies, I strive to build applications that not only work flawlessly but also provide exceptional user experiences."
+}

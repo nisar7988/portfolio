@@ -1,0 +1,27 @@
+@layer base {
+    :root {
+      /* Primary Colors */
+      --color-primary-100: 10 10 10;
+      --color-primary-200: 23 23 23;
+      --color-primary-300: 38 38 38;
+      
+      /* Accent Colors */
+      --color-accent-red: 255 46 46;
+      --color-accent-purple: 125 60 255;
+      
+      /* Text Colors */
+      --color-text-primary: 255 255 255;
+      --color-text-secondary: 179 179 179;
+      
+      /* Background Colors */
+      --color-bg-primary: 0 0 0;
+      --color-bg-secondary: 15 15 15;
+      
+      /* Gradients */
+      --gradient-main: linear-gradient(
+        135deg,
+        rgb(var(--color-accent-purple)) 0%,
+        rgb(var(--color-accent-red)) 100%
+      );
+    }
+  }

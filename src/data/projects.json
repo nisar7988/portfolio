@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "CollaborateX",
+      "description": "A video Conferencing app that allows users to create and join video calls, share screens, and collaborate in real-time.",
+      "image": "/images/collaboratex.png",
+      "technologies": ["React", "Node.js", "MongoDB","Tailwind", "Socket.io","webRTC"],
+      "githubLink": "https://github.com/username/project",
+      "liveLink": "https://collaboratex.vercel.app/"
+    },
+    {
+      "id": 2,
+      "title": "TicTacToe",
+      "description": "A simple Tic Tac Toe game built with React and Tailwind CSS.",
+      "image": "/images/tictactoe.png",
+      "technologies": ["React", "Tailwind"],
+      "githubLink": "https://github.com/username/project2",
+      "liveLink": "https://nisar7988.github.io/ttt/"
+    }
+  ]
+}
