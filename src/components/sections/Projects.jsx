@@ -53,7 +53,7 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section className="min-h-screen px-4 py-20">
+    <section className="min-h-screen px-4 py-20" id="projects">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, x: -20 }}

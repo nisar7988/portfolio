@@ -10,7 +10,7 @@
     },
     {
       "category": "Tools",
-      "items": ["Git","Github","CI/CD",  "Firebase", "VS Code"]
+      "items": ["Git","Github","CI/CD","VS Code"]
     }
   ],
   "profile": {
