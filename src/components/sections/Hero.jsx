@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import { Colors } from '../../constants/colors';
 import { useEffect, useState } from 'react';
 
@@ -8,31 +9,29 @@ const Hero = () => {
 
   useEffect(() => {
     let currentIndex = 0;
-    let isDeleting = false;
     
     const interval = setInterval(() => {
-      if (!isDeleting && currentIndex <= fullText.length) {
+      if (currentIndex <= fullText.length) {
         setText(fullText.slice(0, currentIndex));
         currentIndex++;
-        if (currentIndex > fullText.length) {
-          isDeleting = true;
-          setTimeout(() => {
-            currentIndex = fullText.length;
-          }, 1500); // Pause at full text
-        }
-      } else if (isDeleting) {
-        setText(fullText.slice(0, currentIndex - 1));
-        currentIndex--;
-        if (currentIndex <= 0) {
-          isDeleting = false;
-          currentIndex = 0;
-          // No clearInterval here, let it continue
-        }
+      } else {
+        // Reset to start the animation again
+        currentIndex = 0;
       }
-    }, isDeleting ? 100 : 150);
+    }, 200);
 
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4">
@@ -59,17 +58,25 @@ const Hero = () => {
         >
           Full Stack Developer | UI/UX Enthusiast | Problem Solver
         </motion.p>
-        <motion.button
+        <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 rounded-full font-semibold cursor-pointer"
-          style={{ 
-            background: Colors.accent.blue,
-            color: Colors.text.primary
-          }}
         >
-          View My Work
-        </motion.button>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={1000}
+            offset={-50}
+            className="px-8 py-3 rounded-full font-semibold cursor-pointer inline-block"
+            style={{ 
+              background: Colors.accent.blue,
+              color: Colors.text.primary,
+              textDecoration: 'none'
+            }}
+          >
+            View My Work
+          </Link>
+        </motion.div>
       </motion.div>
     </section>
   );

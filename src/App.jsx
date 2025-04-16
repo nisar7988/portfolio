@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+  import React from 'react'
 import HomePage from './components/HomePage'
-
+import MovingTriangle from './components/MovingTriangle'
 
 const App = () => {
-  const [showAuth, setShowAuth] = useState(false);
-
   return (
-    <div>
-      <HomePage />
+    <div className="relative min-h-screen overflow-x-hidden">
+      <MovingTriangle />
+      <div className="relative z-10">
+        <HomePage />
+      </div>
     </div>
   )
 }
