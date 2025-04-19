@@ -191,7 +191,7 @@ const Contact = () => {
               border: '1px solid rgba(255,255,255,0.1)'
             }}
           >
-            <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ">
               Send Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -241,10 +241,10 @@ const Contact = () => {
                     className="w-6 h-6 border-2 border-white border-t-transparent rounded-full"
                   />
                 ) : (
-                  <>
+                  <div className="flex items-center gap-2 cursor-pointer">
                     <FaPaperPlane />
                     Send Message
-                  </>
+                  </div>
                 )}
               </motion.button>
             </form>
