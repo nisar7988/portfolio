@@ -46,7 +46,7 @@ const Hero = () => {
           style={{ color: Colors.text.primary }}
         >
           Hello, I'm{" "}
-          <div className="inline-block min-w-[280px] h-[72px] align-bottom">
+          <div className="inline-block min-w-[280px] h-[59px] align-bottom">
             <span style={{ color: Colors.accent.blue }}>{text}</span>
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
