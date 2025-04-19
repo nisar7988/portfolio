@@ -3,6 +3,8 @@ import { Colors } from '../../constants/colors';
 import contactData from '../../data/contact.json';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast'; // Add this import
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -22,13 +24,51 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsLoading(false);
-    setFormState({ name: '', email: '', message: '' });
+
+    try {
+      const serviceId = "service_dc0zv6h";
+      const templateId = "template_z8wx91y";
+      const publicKey = "lMitc0wnowU8xw-1l";
+
+      const templateParams = {
+        from_name: formState.name,
+        from_email: formState.email,
+        message: formState.message,
+        to_name: "Nisar Ahmed",
+        reply_to: formState.email
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setFormState({
+        name: '',
+        email: '',
+        message: ''
+      });
+      toast.success('Message sent successfully!', {
+        duration: 4000,
+        style: {
+          background: Colors.accent.blue,
+          color: '#fff',
+        },
+      });
+    } catch (error) {
+      console.error('Email error:', error);
+      toast.error('Failed to send message. Please try again.', {
+        duration: 4000,
+        style: {
+          background: '#ef4444',
+          color: '#fff',
+        },
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <section className="relative min-h-screen px-4 pb-32 pt-20 overflow-hidden">
+      <Toaster position="top-right" /> {/* Add this line after the section opening tag */}
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
