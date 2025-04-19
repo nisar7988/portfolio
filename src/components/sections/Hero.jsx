@@ -45,12 +45,15 @@ const Hero = () => {
           className="text-6xl font-bold mb-6"
           style={{ color: Colors.text.primary }}
         >
-          Hello, I'm <span style={{ color: Colors.accent.blue }}>{text}</span>
-          <motion.span
-            animate={{ opacity: [0, 1, 0] }}
-            transition={{ duration: 0.8, repeat: Infinity }}
-            style={{ color: Colors.accent.blue }}
-          >|</motion.span>
+          Hello, I'm{" "}
+          <div className="inline-block min-w-[280px] h-[72px] align-bottom">
+            <span style={{ color: Colors.accent.blue }}>{text}</span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 0.8, repeat: Infinity }}
+              style={{ color: Colors.accent.blue }}
+            >|</motion.span>
+          </div>
         </motion.h1>
         <motion.p 
           className="text-xl mb-8"
