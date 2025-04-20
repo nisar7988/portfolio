@@ -18,7 +18,7 @@ const Hero = () => {
         // Reset to start the animation again
         currentIndex = 0;
       }
-    }, 200);
+    }, 400);
 
     return () => clearInterval(interval);
   }, []);
@@ -34,19 +34,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
+    <section className="min-h-screen flex  flex-wrap items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center"
+        className="text-center "
       >
         <motion.h1 
-          className="text-6xl font-bold mb-6"
+          className="text-6xl flex-col font-bold mb-6"
           style={{ color: Colors.text.primary }}
         >
-          Hello, I'm{" "}
-          <div className="inline-block min-w-[280px] h-[59px] align-bottom">
+         <span> Hello, I'm{" "}</span>  
+                 <div className="inline-block w-screen max-h-max ">
             <span style={{ color: Colors.accent.blue }}>{text}</span>
             <motion.span
               animate={{ opacity: [0, 1, 0] }}
@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
         </motion.h1>
         <motion.p 
-          className="text-xl mb-8"
+          className="text-xl mb-8 mt-4"
           style={{ color: Colors.text.secondary }}
         >
           Full Stack Developer | UI/UX Enthusiast | Problem Solver

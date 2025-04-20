@@ -7,7 +7,7 @@
       "image": "/images/collaboratex.png",
       "technologies": ["React", "Node.js", "MongoDB","Tailwind", "Socket.io","webRTC"],
       "githubLink": "https://github.com/username/project",
-      "liveLink": "https://collaboratex.vercel.app/"
+      "link": "https://collaboratex.vercel.app/"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "image": "/images/tictactoe.png",
       "technologies": ["React", "Tailwind"],
       "githubLink": "https://github.com/username/project2",
-      "liveLink": "https://nisar7988.github.io/ttt/"
+      "link": "https://nisar7988.github.io/ttt/"
     }
   ]
 }
