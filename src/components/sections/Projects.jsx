@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Colors } from '../../constants/colors';
 import projectsData from '../../data/projects.json';
 import { FaExternalLinkAlt } from 'react-icons/fa';
