@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, F
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast'; // Add this import
-
+import {motion} from "framer-motion"
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: '',

@@ -1,6 +1,7 @@
 import { Colors } from '../../constants/colors';
 import projectsData from '../../data/projects.json';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import {motion} from "framer-motion"
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
