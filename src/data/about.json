@@ -12,14 +12,15 @@
       "category": "Backend",
       "items": ["Node.js", "Express", "RESTful APIs"]
     },
+      {
+      "category": "Database",
+      "items": ["Mysql","MongoDB"]
+    },
     {
       "category": "Tools",
       "items": ["Git","Github","CI/CD","VS Code"]
-    },
-    {
-      "category": "Database",
-      "items": ["Mysql","MongoDB"]
     }
+  
   ],
   
   "profile": {
