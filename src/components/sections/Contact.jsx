@@ -3,7 +3,7 @@ import contactData from '../../data/contact.json';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast'; // Add this import
+import toast, { Toaster } from 'react-hot-toast';
 import {motion} from "framer-motion"
 const Contact = () => {
   const [formState, setFormState] = useState({

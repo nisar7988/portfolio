@@ -1,67 +1,45 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { Colors } from '../../constants/colors';
-import { useEffect, useState } from 'react';
 
 const Hero = () => {
-  const [text, setText] = useState("");
-  const fullText = "Nisar Ahmed";
-
-  useEffect(() => {
-    let currentIndex = 0;
-    
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        // Reset to start the animation again
-        currentIndex = 0;
-      }
-    }, 400);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
-    <section className="min-h-screen flex  flex-wrap items-center justify-center px-4">
+    <section className="min-h-screen flex flex-wrap items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center "
+        className="text-center"
       >
         <motion.h1 
-          className="text-6xl flex-col font-bold mb-6"
+          className="text-6xl font-bold mb-6"
           style={{ color: Colors.text.primary }}
         >
-         <span> Hello, I'm{" "}</span>  
-                 <div className="inline-block w-screen max-h-max ">
-            <span style={{ color: Colors.accent.blue }}>{text}</span>
-            <motion.span
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              style={{ color: Colors.accent.blue }}
-            >|</motion.span>
-          </div>
+          <span>Hello, I'm </span>  
+          <motion.span
+            style={{ color: Colors.accent.blue }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            Nisar Ahmed
+          </motion.span>
         </motion.h1>
+        
         <motion.p 
           className="text-xl mb-8 mt-4"
           style={{ color: Colors.text.secondary }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
         >
           Full Stack Developer | UI/UX Enthusiast | Problem Solver
         </motion.p>
+        
         <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
