@@ -5,14 +5,23 @@
       "items": ["React", "Next.js", "Bootstrap", "Tailwind CSS", "HTML5/CSS3"]
     },
     {
+      "category":"State Management",
+      "item":["Zustand","Redux"]
+    },
+    {
       "category": "Backend",
-      "items": ["Node.js", "Express", "MongoDB", "MySql", "RESTful APIs"]
+      "items": ["Node.js", "Express", "RESTful APIs"]
     },
     {
       "category": "Tools",
       "items": ["Git","Github","CI/CD","VS Code"]
+    },
+    {
+      "category": "Database",
+      "items": ["Mysql","MongoDB"]
     }
   ],
+  
   "profile": {
     "name": "Nisar Ahmed",
     "role": "Full Stack Developer",
