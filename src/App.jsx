@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import HomePage from './components/HomePage';
 import {  useScroll, useSpring } from 'framer-motion';
-
+import {motion} from 'framer-motion'
 const App = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
