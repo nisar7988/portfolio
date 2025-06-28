@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import HomePage from './components/HomePage';
 import {  useScroll, useSpring } from 'framer-motion';
 import {motion} from 'framer-motion'
+import Thunder from './components/ui/Thunder';
+
 const App = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -20,6 +22,9 @@ const App = () => {
         msOverflowStyle: 'none', // For IE/Edge
       }}
     >
+      {/* Thunder Animation */}
+      <Thunder />
+      
       {/* Scroll progress indicator */}
       <motion.div 
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-purple-500 origin-[0%] z-50"
