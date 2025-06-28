@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { Colors } from '../../constants/colors';
-
+import { WaterDrops } from "../ui/meteors";
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-wrap items-center justify-center px-4">
+    <section className="min-h-screen flex flex-wrap items-center justify-center px-4 relative overflow-hidden">
+        <WaterDrops number={20} />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -18,7 +18,7 @@
     },
     {
       "category": "Tools",
-      "items": ["Git","Github","CI/CD","VS Code"]
+      "items": ["Git","GitHub","GitLab","VS Code"]
     }
   
   ],
