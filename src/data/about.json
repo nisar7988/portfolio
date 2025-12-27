@@ -2,27 +2,55 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": ["React", "Next.js", "Bootstrap", "Tailwind CSS", "HTML5/CSS3"]
+      "items": [
+        "React",
+        "Next.js",
+        "Bootstrap",
+        "Tailwind CSS",
+        "HTML5/CSS3"
+      ]
     },
     {
-      "category":"State Management",
-      "items":["Zustand","Redux"]
+      "category": "Mobile Application",
+      "items": [
+        "React Native",
+        "Expo"
+      ]
+    },
+    {
+      "category": "State Management",
+      "items": [
+        "Zustand",
+        "Redux"
+      ]
     },
     {
       "category": "Backend",
-      "items": ["Node.js", "Express", "RESTful APIs"]
+      "items": [
+        "Node.js",
+        "Express",
+        "RESTful APIs"
+      ]
     },
-      {
+    {
       "category": "Database",
-      "items": ["Mysql","MongoDB"]
+      "items": [
+        "Mysql",
+        "MongoDB"
+      ]
     },
     {
       "category": "Tools",
-      "items": ["Git","GitHub","GitLab","VS Code"]
+      "items": [
+        "Git",
+        "GitHub",
+        "GitLab",
+        "VS Code",
+        "Android Studio",
+        "Xcode"
+      ]
     }
-  
   ],
-  
   "profile": {
     "name": "Nisar Ahmed",
     "role": "Full Stack Developer",

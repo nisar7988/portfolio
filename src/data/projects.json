@@ -5,7 +5,14 @@
       "title": "CollaborateX",
       "description": "A video Conferencing app that allows users to create and join video calls, share screens, and collaborate in real-time.",
       "image": "/images/collaboratex.png",
-      "technologies": ["React", "Node.js", "MongoDB","Tailwind", "Socket.io","webRTC"],
+      "technologies": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Tailwind",
+        "Socket.io",
+        "webRTC"
+      ],
       "githubLink": "https://github.com/username/project",
       "link": "https://collaboratex.vercel.app/"
     },
@@ -14,9 +21,27 @@
       "title": "TicTacToe",
       "description": "A simple Tic Tac Toe game built with React and Tailwind CSS.",
       "image": "/images/tictactoe.png",
-      "technologies": ["React", "Tailwind"],
+      "technologies": [
+        "React",
+        "Tailwind"
+      ],
       "githubLink": "https://github.com/username/project2",
       "link": "https://nisar7988.github.io/ttt/"
+    },
+    {
+      "id": 3,
+      "title": "Tradewave",
+      "description": "TradeWave is a B2B e-commerce platform featuring a mobile app for business customers and a web admin panel for managing vendors, products, orders, and platform operations.",
+      "image": "/images/tradewave.png",
+      "technologies": [
+        "React",
+        "Tanstack",
+        "React Native",
+        "Expo",
+        "Tailwind"
+      ],
+      "githubLink": "",
+      "link": ""
     }
   ]
 }
