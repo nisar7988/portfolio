@@ -33,7 +33,6 @@ const Contact = () => {
         from_name: formState.name,
         from_email: formState.email,
         message: formState.message,
-        to_name: "Nisar Ahmed",
         reply_to: formState.email
       };
 
