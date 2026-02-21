@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaAndroid, FaArrowLeft, FaPlay } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaAndroid, FaArrowLeft, FaPlay, FaLayerGroup, FaServer, FaLink, FaLock, FaRocket } from 'react-icons/fa';
 import projectsData from '../../data/projects.json';
 import { Colors } from '../../constants/colors';
+
+const archItems = [
+    { key: 'stateManagement', label: 'State Management', icon: <FaLayerGroup className="text-blue-400" /> },
+    { key: 'backendStructure', label: 'Backend Structure', icon: <FaServer className="text-purple-400" /> },
+    { key: 'apiDesign', label: 'API Design', icon: <FaLink className="text-pink-400" /> },
+    { key: 'authentication', label: 'Authentication', icon: <FaLock className="text-yellow-400" /> },
+    { key: 'deployment', label: 'Deployment', icon: <FaRocket className="text-green-400" /> },
+];
 
 const ProjectDetails = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -208,62 +216,99 @@ const ProjectDetails = () => {
 
                     </div>
 
-                    {/* Sidebar */}
-                    <div className="lg:col-span-1">
-                        <div className="sticky top-24 space-y-6">
-
-                            {/* Actions Card */}
-                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl space-y-4">
-                                <h3 className="text-xl font-semibold mb-4 text-white">Project Links</h3>
-
-                                {project.apkLink && (
-                                    <a
-                                        href={project.apkLink}
-                                        target="_blank"
-                                        className="flex items-center justify-center gap-2 w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-green-600/20 group"
-                                    >
-                                        <FaAndroid className="text-xl group-hover:scale-110 transition-transform" />
-                                        Download APK
-                                    </a>
-                                )}
-
-                                {project.link && (
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-lg shadow-blue-600/20"
-                                    >
-                                        <FaExternalLinkAlt /> Live Demo
-                                    </a>
-                                )}
-
-                                {project.githubLink && (
-                                    <a
-                                        href={project.githubLink}
-                                        target="_blank"
-                                        className="flex items-center justify-center gap-2 w-full py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-semibold transition-all border border-gray-700"
-                                    >
-                                        <FaGithub className="text-xl" /> View Source
-                                    </a>
+                    {/* Architecture Section */}
+                    {project.architecture && (
+                        <motion.section
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                                <span className="w-8 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></span>
+                                Architecture Deep-Dive
+                            </h2>
+                            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Why these tech choices were made — shows product-company level thinking.
+                            </p>
+                            <div className="space-y-4">
+                                {archItems.map(({ key, label, icon }) =>
+                                    project.architecture[key] && (
+                                        <motion.div
+                                            key={key}
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            className="flex items-start gap-4 p-5 rounded-xl border border-white/5 bg-white/5 hover:border-white/10 transition-colors"
+                                        >
+                                            <div className="mt-1 text-xl flex-shrink-0">{icon}</div>
+                                            <div>
+                                                <h4 className="font-semibold text-white mb-1">{label}</h4>
+                                                <p className="text-gray-400 text-sm leading-relaxed">{project.architecture[key]}</p>
+                                            </div>
+                                        </motion.div>
+                                    )
                                 )}
                             </div>
-
-                            {/* Tech Stack Details */}
-                            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                                <h3 className="text-xl font-semibold mb-4 text-white">Technolgies Used</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map(tech => (
-                                        <span key={tech} className="px-3 py-1.5 text-sm md:text-xs lg:text-sm bg-gray-800 rounded-lg text-gray-300 border border-gray-700">
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                        </motion.section>
+                    )}
 
                 </div>
+
+                {/* Sidebar */}
+                <div className="lg:col-span-1">
+                    <div className="sticky top-24 space-y-6">
+
+                        {/* Actions Card */}
+                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl space-y-4">
+                            <h3 className="text-xl font-semibold mb-4 text-white">Project Links</h3>
+
+                            {project.apkLink && (
+                                <a
+                                    href={project.apkLink}
+                                    target="_blank"
+                                    className="flex items-center justify-center gap-2 w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-green-600/20 group"
+                                >
+                                    <FaAndroid className="text-xl group-hover:scale-110 transition-transform" />
+                                    Download APK
+                                </a>
+                            )}
+
+                            {project.link && (
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    className="flex items-center justify-center gap-2 w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-all shadow-lg shadow-blue-600/20"
+                                >
+                                    <FaExternalLinkAlt /> Live Demo
+                                </a>
+                            )}
+
+                            {project.githubLink && (
+                                <a
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    className="flex items-center justify-center gap-2 w-full py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-semibold transition-all border border-gray-700"
+                                >
+                                    <FaGithub className="text-xl" /> View Source
+                                </a>
+                            )}
+                        </div>
+
+                        {/* Tech Stack Details */}
+                        <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl">
+                            <h3 className="text-xl font-semibold mb-4 text-white">Technologies Used</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {project.technologies.map(tech => (
+                                    <span key={tech} className="px-3 py-1.5 text-sm md:text-xs lg:text-sm bg-gray-800 rounded-lg text-gray-300 border border-gray-700">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     );

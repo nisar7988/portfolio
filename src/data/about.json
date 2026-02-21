@@ -1,61 +1,93 @@
 {
+  "profile": {
+    "name": "Nisar Ahmed",
+    "role": "Full Stack Developer",
+    "location": "India",
+    "experience": "1+ year"
+  },
+  "openToWork": true,
+  "resumeUrl": "https://drive.google.com/file/d/1Bj6bIvk3BlVDSR89sgjC6gBmFWjA7V6Z/view?usp=drive_link",
+  "description": "Full Stack Developer with 1+ year of hands-on experience building production-ready web and mobile applications. I specialize in crafting performant React & Node.js apps — from real-time collaboration tools using WebRTC & Socket.io, to cross-platform B2B platforms with React Native. I've delivered 5+ projects that prioritize clean architecture, fast load times, and exceptional user experience.",
+  "stats": [
+    {
+      "label": "Projects Built",
+      "value": "5+"
+    },
+    {
+      "label": "Experience",
+      "value": "1 Year"
+    },
+    {
+      "label": "Tech Stacks",
+      "value": "10+"
+    }
+  ],
+  "performanceHighlights": [
+    "JWT Authentication",
+    "Lazy Loading",
+    "Code Splitting",
+    "RESTful API Design",
+    "Real-time WebSockets",
+    "Vercel & Render Deploy",
+    "Mobile-first Design"
+  ],
   "skills": [
     {
       "category": "Frontend",
+      "tier": "core",
       "items": [
         "React",
         "Next.js",
-        "Bootstrap",
         "Tailwind CSS",
         "HTML5/CSS3"
       ]
     },
     {
-      "category": "Mobile Application",
+      "category": "Mobile",
+      "tier": "core",
       "items": [
         "React Native",
         "Expo"
       ]
     },
     {
-      "category": "State Management",
-      "items": [
-        "Zustand",
-        "Redux"
-      ]
-    },
-    {
       "category": "Backend",
+      "tier": "core",
       "items": [
         "Node.js",
         "Express",
-        "RESTful APIs"
+        "RESTful APIs",
+        "Socket.io"
       ]
     },
     {
       "category": "Database",
+      "tier": "core",
       "items": [
-        "Mysql",
-        "MongoDB"
+        "MongoDB",
+        "MySQL"
       ]
     },
     {
-      "category": "Tools",
+      "category": "State Management",
+      "tier": "familiar",
+      "items": [
+        "Zustand",
+        "Redux",
+        "TanStack Query"
+      ]
+    },
+    {
+      "category": "Tools & Platforms",
+      "tier": "familiar",
       "items": [
         "Git",
         "GitHub",
-        "GitLab",
+        "Vercel",
+        "Render",
         "VS Code",
-        "Android Studio",
-        "Xcode"
+        "Android Studio"
       ]
     }
-  ],
-  "profile": {
-    "name": "Nisar Ahmed",
-    "role": "Full Stack Developer",
-    "location": "India",
-    "experience": "3+ years"
-  },
-  "description": "I am a passionate Full Stack Developer with a deep love for creating elegant, efficient solutions to complex problems. With expertise in both frontend and backend technologies, I strive to build applications that not only work flawlessly but also provide exceptional user experiences."
+  ]
 }

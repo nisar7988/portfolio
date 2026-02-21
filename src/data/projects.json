@@ -2,15 +2,17 @@
   "projects": [
     {
       "id": 1,
+      "featured": true,
       "title": "CollaborateX",
-      "description": "A video Conferencing app that allows users to create and join video calls, share screens, and collaborate in real-time.",
-      "longDescription": "CollaborateX is a cutting-edge video conferencing solution designed to bridge the gap between remote teams. Built with performance and scalability in mind, it leverages WebRTC for low-latency peer-to-peer communication. \n\n Users can create instant meeting rooms, share their screens for presentations, and communicate via real-time chat. The application features a modern, intuitive interface that makes joining calls seamless without the need for complex software installations.",
+      "description": "A real-time video conferencing platform that lets distributed teams meet, present, and collaborate without friction — no downloads required.",
+      "longDescription": "CollaborateX is a cutting-edge video conferencing solution designed to bridge the gap between remote teams. Built with performance and scalability in mind, it leverages WebRTC for low-latency peer-to-peer communication.\n\nUsers can create instant meeting rooms, share their screens for presentations, and communicate via real-time chat. The application features a modern, intuitive interface that makes joining calls seamless without complex software installations.",
+      "impact": "Enables real-time collaboration with sub-200ms latency using WebRTC peer-to-peer connections.",
       "features": [
-        "Real-time HD Video & Audio",
-        "Screen Sharing Capabilities",
-        "Instant Chat Messaging",
-        "Room Creation & Joining Logic",
-        "Responsive Design for All Devices"
+        "Real-time HD Video & Audio via WebRTC",
+        "Screen Sharing for Presentations",
+        "Instant Chat Messaging with Socket.io",
+        "Room Creation & Secure Join Logic",
+        "Responsive UI for All Devices"
       ],
       "image": "/images/collaboratex.png",
       "technologies": [
@@ -19,27 +21,36 @@
         "MongoDB",
         "Tailwind",
         "Socket.io",
-        "webRTC"
+        "WebRTC"
       ],
-      "githubLink": "https://github.com/username/project",
+      "githubLink": "https://github.com/nisar7988/collaboratex",
       "gallery": [
         "/images/collaboratex-1.png",
         "/images/collaboratex-2.png",
         "/images/collaboratex-3.png"
       ],
       "link": "https://collaboratex.vercel.app/",
-      "videoUrl": "https://www.youtube.com/watch?v=example",
-      "apkLink": ""
+      "videoUrl": "",
+      "apkLink": "",
+      "architecture": {
+        "stateManagement": "Zustand — chosen for its minimal boilerplate and lightweight footprint over Redux. Since CollaborateX is a real-time UI-heavy app, Zustand's direct store access avoids unnecessary re-renders and keeps call state (participants, mute, stream) snappy.",
+        "backendStructure": "MVC pattern with Express.js: routes → controllers → services → models. Socket.io runs on the same server instance, enabling seamless event emission from REST controllers into active WebSocket rooms.",
+        "apiDesign": "RESTful endpoints handle room creation, auth, and user management. WebRTC signaling (offer/answer/ICE candidates) is routed via Socket.io events for ultra-low latency, avoiding HTTP round-trip overhead for real-time data.",
+        "authentication": "JWT-based authentication with short-lived access tokens and refresh tokens stored in HTTP-only cookies. Prevents XSS attacks while maintaining seamless session continuity across page reloads.",
+        "deployment": "Frontend deployed on Vercel with automatic CI/CD from the main branch. Backend hosted on Render with a health-check endpoint keeping the instance warm. MongoDB Atlas handles cloud database with connection pooling."
+      }
     },
     {
       "id": 2,
+      "featured": false,
       "title": "TicTacToe",
-      "description": "A simple Tic Tac Toe game built with React and Tailwind CSS.",
-      "longDescription": "A classic Tic Tac Toe game reimagined with a modern aesthetic. This project showcases the power of React's state management and component-based architecture. \n\n It features a clean, responsive design, a game history tracking system that allows players to jump back to previous moves, and a winning logic algorithm that highlights the victory path. Perfect for a quick break and a demonstration of clean code practices.",
+      "description": "A classic game reimagined with React — featuring time-travel move history, winner highlighting, and a clean responsive UI.",
+      "longDescription": "A classic Tic Tac Toe game reimagined with a modern aesthetic. This project showcases the power of React's state management and component-based architecture.\n\nIt features a clean, responsive design, a game history tracking system that allows players to jump back to previous moves, and a winning logic algorithm that highlights the victory path. Perfect for a quick break and a demonstration of clean code practices.",
+      "impact": "Demonstrates mastery of React state patterns and immutable data structures through time-travel gameplay.",
       "features": [
         "Interactive Game Board",
         "History Tracking (Time Travel)",
-        "Winner Highlighting",
+        "Winner Highlighting Algorithm",
         "Responsive Layout",
         "Dark/Light Mode Support"
       ],
@@ -49,22 +60,24 @@
         "React",
         "Tailwind"
       ],
-      "githubLink": "https://github.com/username/project2",
+      "githubLink": "https://github.com/nisar7988/ttt",
       "link": "https://nisar7988.github.io/ttt/",
       "videoUrl": "",
       "apkLink": ""
     },
     {
       "id": 3,
+      "featured": false,
       "title": "Tradewave",
-      "description": "TradeWave is a B2B e-commerce platform featuring a mobile app for business customers and a web admin panel for managing vendors, products, orders, and platform operations.",
-      "longDescription": "TradeWave revolutionizes B2B commerce by providing a comprehensive ecosystem for vendors and business customers. \n\n The platform consists of two main components: a powerful Mobile App built with React Native for customers to browse catalogs, place bulk orders, and track shipments; and a sophisticated Web Admin Panel for vendors to manage inventory, analyze sales data, and process orders efficiently. It handles complex business logic like bulk pricing, minimum order quantities, and vendor-specific catalogs.",
+      "description": "A full B2B e-commerce ecosystem — mobile app for buyers & web admin panel for vendors — handling bulk orders, inventory, and real-time tracking.",
+      "longDescription": "TradeWave revolutionizes B2B commerce by providing a comprehensive ecosystem for vendors and business customers.\n\nThe platform consists of two main components: a powerful Mobile App built with React Native for customers to browse catalogs, place bulk orders, and track shipments; and a sophisticated Web Admin Panel for vendors to manage inventory, analyze sales data, and process orders efficiently. It handles complex business logic like bulk pricing, minimum order quantities, and vendor-specific catalogs.",
+      "impact": "Streamlines B2B ordering — reducing order processing time through a unified vendor + buyer platform.",
       "features": [
-        "Cross-Platform Mobile App (iOS/Android)",
+        "Cross-Platform Mobile App (iOS & Android)",
         "Comprehensive Admin Dashboard",
         "Real-time Order Tracking",
         "Vendor Management System",
-        "Bulk Ordering & Pricing Logic"
+        "Bulk Ordering & Tiered Pricing Logic"
       ],
       "image": "/images/tradewave.png",
       "gallery": [
@@ -77,9 +90,9 @@
       ],
       "technologies": [
         "React",
-        "Tanstack",
         "React Native",
         "Expo",
+        "TanStack Query",
         "Tailwind"
       ],
       "githubLink": "",

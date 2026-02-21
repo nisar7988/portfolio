@@ -24,8 +24,8 @@ const App = () => {
         msOverflowStyle: 'none', // For IE/Edge
       }}
     >
-      {/* Thunder Animation */}
-      <Thunder />
+
+
 
       {/* Scroll progress indicator */}
       <motion.div
