@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.02, y: -6 }}
       transition={{ duration: 0.5 }}
-      className="rounded-xl overflow-hidden backdrop-blur-md transition-all duration-500 flex flex-col relative"
+      className="rounded-xl overflow-hidden backdrop-blur-md transition-all duration-500 flex flex-col relative mt-4"
       style={{
         background: 'linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1))',
         border: '1px solid rgba(255,255,255,0.1)',
