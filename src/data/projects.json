@@ -103,8 +103,8 @@
         "Framer Motion",
         "GSAP"  
       ],
-      "githubLink": "",
-      "link": "",
+      "githubLink": "https://github.com/nisar7988/jancode",
+      "link": "https://jancode.vercel.app/",
       "videoUrl": "",
       "apkLink": ""
     },
@@ -140,9 +140,9 @@
         "Firebase push notification"
       ],
       "githubLink": "",
-      "link": "",
+      "link": "https://taskflowmaster.vercel.app/",
       "videoUrl": "",
-      "apkLink": "https://play.google.com/store/apps/details?id=com.nisar7988.Tradewave"
+      "apkLink": ""
     }
   ]
 }
