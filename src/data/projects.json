@@ -1,5 +1,40 @@
 {
   "projects": [
+     {
+      "id": 2,
+      "featured": true,
+      "title": "Tradewave",
+      "description": "A full B2B e-commerce ecosystem — mobile app for buyers & web admin panel for vendors — handling bulk orders, inventory, and real-time tracking.",
+      "longDescription": "TradeWave revolutionizes B2B commerce by providing a comprehensive ecosystem for vendors and business customers.\n\nThe platform consists of two main components: a powerful Mobile App built with React Native for customers to browse catalogs, place bulk orders, and track shipments; and a sophisticated Web Admin Panel for vendors to manage inventory, analyze sales data, and process orders efficiently. It handles complex business logic like bulk pricing, minimum order quantities, and vendor-specific catalogs.",
+      "impact": "Streamlines B2B ordering — reducing order processing time through a unified vendor + buyer platform.",
+      "features": [
+        "Cross-Platform Mobile App (iOS & Android)",
+        "Comprehensive Admin Dashboard",
+        "Real-time Order Tracking",
+        "Vendor Management System",
+        "Bulk Ordering & Tiered Pricing Logic"
+      ],
+      "image": "/images/tradewave/tradewave.png",
+      "gallery": [
+        "/images/tradewave/tradewave-1.png",
+        "/images/tradewave/tradewave-2.png",
+        "/images/tradewave/tradewave-3.png",
+        "/images/tradewave/tradewave-4.png",
+        "/images/tradewave/tradewave-5.png",
+        "/images/tradewave/tradewave-6.png"
+      ],
+      "technologies": [
+        "React",
+        "React Native",
+        "Expo",
+        "TanStack Query",
+        "Tailwind"
+      ],
+      "githubLink": "",
+      "link": "",
+      "videoUrl": "",
+      "apkLink": "https://exposure.dev/gradewave/apk"
+    },
     {
       "id": 1,
       "featured": true,
@@ -14,7 +49,7 @@
         "Room Creation & Secure Join Logic",
         "Responsive UI for All Devices"
       ],
-      "image": "/images/collaboratex.png",
+      "image": "/images/collaboratex/collaboratex.png",
       "technologies": [
         "React",
         "Node.js",
@@ -25,9 +60,9 @@
       ],
       "githubLink": "https://github.com/nisar7988/collaboratex",
       "gallery": [
-        "/images/collaboratex-1.png",
-        "/images/collaboratex-2.png",
-        "/images/collaboratex-3.png"
+        "/images/collaboratex/collaboratex-1.png",
+        "/images/collaboratex/collaboratex-2.png",
+        "/images/collaboratex/collaboratex-3.png"
       ],
       "link": "https://collaboratex.vercel.app/",
       "videoUrl": "",
@@ -40,65 +75,74 @@
         "deployment": "Frontend deployed on Vercel with automatic CI/CD from the main branch. Backend hosted on Render with a health-check endpoint keeping the instance warm. MongoDB Atlas handles cloud database with connection pooling."
       }
     },
+   
+
     {
-      "id": 2,
+      "id": 4,
       "featured": false,
-      "title": "TicTacToe",
-      "description": "A classic game reimagined with React — featuring time-travel move history, winner highlighting, and a clean responsive UI.",
-      "longDescription": "A classic Tic Tac Toe game reimagined with a modern aesthetic. This project showcases the power of React's state management and component-based architecture.\n\nIt features a clean, responsive design, a game history tracking system that allows players to jump back to previous moves, and a winning logic algorithm that highlights the victory path. Perfect for a quick break and a demonstration of clean code practices.",
-      "impact": "Demonstrates mastery of React state patterns and immutable data structures through time-travel gameplay.",
+      "title": "Jancode",
+      "description": "A 3D website portfolio for a software service company.",
+      "longDescription": "A visually striking 3D website portfolio designed for a software service company. This project pushes the boundaries of web experiences with interactive 3D elements, creating an immersive journey for visitors exploring the company's offerings.",
+      "impact": "Delivers an engaging and modern user experience with interactive 3D visuals.",
       "features": [
-        "Interactive Game Board",
-        "History Tracking (Time Travel)",
-        "Winner Highlighting Algorithm",
-        "Responsive Layout",
-        "Dark/Light Mode Support"
+        "Interactive 3D Elements",
+        "Modern and Responsive UI",
+        "Performance Optimized",
+        "Dynamic Content Loading"
       ],
-      "image": "/images/tictactoe.png",
-      "gallery": [],
-      "technologies": [
-        "React",
-        "Tailwind"
-      ],
-      "githubLink": "https://github.com/nisar7988/ttt",
-      "link": "https://nisar7988.github.io/ttt/",
-      "videoUrl": "",
-      "apkLink": ""
-    },
-    {
-      "id": 3,
-      "featured": false,
-      "title": "Tradewave",
-      "description": "A full B2B e-commerce ecosystem — mobile app for buyers & web admin panel for vendors — handling bulk orders, inventory, and real-time tracking.",
-      "longDescription": "TradeWave revolutionizes B2B commerce by providing a comprehensive ecosystem for vendors and business customers.\n\nThe platform consists of two main components: a powerful Mobile App built with React Native for customers to browse catalogs, place bulk orders, and track shipments; and a sophisticated Web Admin Panel for vendors to manage inventory, analyze sales data, and process orders efficiently. It handles complex business logic like bulk pricing, minimum order quantities, and vendor-specific catalogs.",
-      "impact": "Streamlines B2B ordering — reducing order processing time through a unified vendor + buyer platform.",
-      "features": [
-        "Cross-Platform Mobile App (iOS & Android)",
-        "Comprehensive Admin Dashboard",
-        "Real-time Order Tracking",
-        "Vendor Management System",
-        "Bulk Ordering & Tiered Pricing Logic"
-      ],
-      "image": "/images/tradewave.png",
+      "image": "/images/jancode/jancode.png",
       "gallery": [
-        "/images/tradewave-1.png",
-        "/images/tradewave-2.png",
-        "/images/tradewave-3.png",
-        "/images/tradewave-4.png",
-        "/images/tradewave-5.png",
-        "/images/tradewave-6.png"
+        "/images/jancode/jancode-1.png",
+        "/images/jancode/jancode-2.png",
+        "/images/jancode/jancode-3.png"
       ],
       "technologies": [
         "React",
-        "React Native",
-        "Expo",
-        "TanStack Query",
-        "Tailwind"
+        "Three.js",
+        "Tailwind CSS",
+        "Framer Motion",
+        "GSAP"  
       ],
       "githubLink": "",
       "link": "",
       "videoUrl": "",
-      "apkLink": "https://exposure.dev/gradewave/apk"
+      "apkLink": ""
+    },
+    {
+      "id": 5,
+      "featured": false,
+      "title": "TaskFlow",
+      "description": "A continuous learning platform for users with push notifications, custom tasks, and management by admins and users.",
+      "longDescription": "TaskFlow is a comprehensive continuous learning platform that empowers users to acquire new skills through customized tasks. It features a robust push notification system to keep users engaged and on track. The platform offers dedicated portals for both admins and users to seamlessly manage learning objectives and track progress.",
+      "impact": "Enhances user engagement and skill acquisition through targeted tasks and timely notifications.",
+      "features": [
+        "Continuous Learning Modules",
+        "Push Notification System",
+        "Custom Task Assignments",
+        "Admin and User Management Portals",
+        "Progress Tracking and Analytics"
+      ],
+      "image": "/images/taskflow/cover.png",
+      "gallery": [
+        "/images/taskflow/image copy.png",
+        "/images/taskflow/image copy 2.png",
+        "/images/taskflow/image copy 3.png",
+        "/images/taskflow/image copy 4.png",
+        "/images/taskflow/image copy 5.png",
+        "/images/taskflow/image copy 6.png",
+        "/images/taskflow/image copy 7.png"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "PWA",
+        "Firebase",
+        "Firebase push notification"
+      ],
+      "githubLink": "",
+      "link": "",
+      "videoUrl": "",
+      "apkLink": ""
     }
   ]
 }
