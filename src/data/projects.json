@@ -1,6 +1,6 @@
 {
   "projects": [
-     {
+    {
       "id": 2,
       "featured": true,
       "title": "Tradewave",
@@ -49,7 +49,7 @@
         "Room Creation & Secure Join Logic",
         "Responsive UI for All Devices"
       ],
-      "image": "/images/collaboratex/collaboratex.png",
+      "image": "/images/collaboratex/cover-showcase.png",
       "technologies": [
         "React",
         "Node.js",
@@ -60,6 +60,8 @@
       ],
       "githubLink": "https://github.com/nisar7988/collaboratex",
       "gallery": [
+        "/images/collaboratex/cover-showcase.png",
+        "/images/collaboratex/collaboratex.png",
         "/images/collaboratex/collaboratex-1.png",
         "/images/collaboratex/collaboratex-2.png",
         "/images/collaboratex/collaboratex-3.png"
@@ -75,8 +77,52 @@
         "deployment": "Frontend deployed on Vercel with automatic CI/CD from the main branch. Backend hosted on Render with a health-check endpoint keeping the instance warm. MongoDB Atlas handles cloud database with connection pooling."
       }
     },
-   
-
+    {
+      "id": 3,
+      "featured": true,
+      "title": "Scoutly",
+      "description": "An autonomous AI job search & application co-pilot — parses resumes, scores job fit using Gemini AI, drafts cover letters, and applies via Gmail API.",
+      "longDescription": "Scoutly (AI Job Hunter Agent) is an intelligent, autonomous job hunting platform engineered to streamline the end-to-end job discovery and application lifecycle.\n\nThe system is built as a production-grade full-stack application featuring a high-performance Next.js 16 (React 19) frontend and a modular Express.js TypeScript backend. Scoutly parses candidate resume PDFs, performs semantic skill extraction and gap analysis against live ATS job openings using Google Gemini AI, and generates tailored cover letters. With integrated Google OAuth 2.0 and the Gmail API, candidates can review, customize, and dispatch personalized job applications with attached resumes in a single click.",
+      "impact": "Automates repetitive job search workflows with sub-second AI fit scoring, semantic skill-gap analysis, and verified direct Gmail dispatch.",
+      "features": [
+        "Automated Resume PDF Parsing & Skill Extraction",
+        "Multi-Tier ATS Job Ingestion & Discovery Pipeline",
+        "Gemini AI Semantic Fit Scoring & Gap Analysis",
+        "Personalized Cover Letter & Cold Email Generation",
+        "Direct One-Click Gmail API Application Dispatch",
+        "Interactive Status Tracking Dashboard & Kanban Board"
+      ],
+      "image": "/images/scoutly/scoutly.png",
+      "gallery": [
+        "/images/scoutly/scoutly.png",
+        "/images/scoutly/scoutly-1.png",
+        "/images/scoutly/scoutly-2.png",
+        "/images/scoutly/scoutly-3.png",
+        "/images/scoutly/scoutly-4.png"
+      ],
+      "technologies": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Gemini AI",
+        "Gmail API"
+      ],
+      "githubLink": "https://github.com/nisar7988/ai-job-hunter",
+      "link": "https://scoutlyjob.vercel.app",
+      "videoUrl": "",
+      "apkLink": "",
+      "architecture": {
+        "stateManagement": "Custom React hooks (useJobs) paired with URL search params and local component state for filters, search queries, modal triggers, and job application lifecycle transitions.",
+        "backendStructure": "Modular layered MVC architecture in TypeScript: REST routing, auth & upload middlewares, controllers, and decoupled service layers isolating Gemini AI analysis, Gmail dispatch, job scraping, and MongoDB models.",
+        "apiDesign": "RESTful JSON endpoints for resume ingestion (multipart form-data), AI-powered job discovery queries, fit analysis computation, tailored application cover letter generation, and Gmail API dispatch.",
+        "authentication": "Google OAuth 2.0 authorization with Google APIs integration, generating JWT tokens stored securely on the client with HTTP-only cookies and CSRF protections.",
+        "deployment": "Frontend configured for Next.js App Router deployment on Vercel; Express server containerized with MongoDB Atlas cluster and Google Cloud Console OAuth integration."
+      }
+    },
     {
       "id": 4,
       "featured": false,
@@ -101,7 +147,7 @@
         "Three.js",
         "Tailwind CSS",
         "Framer Motion",
-        "GSAP"  
+        "GSAP"
       ],
       "githubLink": "https://github.com/nisar7988/jancode",
       "link": "https://jancode.vercel.app/",
@@ -122,8 +168,10 @@
         "Admin and User Management Portals",
         "Progress Tracking and Analytics"
       ],
-      "image": "/images/taskflow/cover.png",
+      "image": "/images/taskflow/cover-showcase.png",
       "gallery": [
+        "/images/taskflow/cover-showcase.png",
+        "/images/taskflow/cover.png",
         "/images/taskflow/image copy.png",
         "/images/taskflow/image copy 2.png",
         "/images/taskflow/image copy 3.png",
@@ -143,6 +191,170 @@
       "link": "https://taskflowmaster.vercel.app/",
       "videoUrl": "",
       "apkLink": ""
+    },
+    {
+      "id": 6,
+      "featured": true,
+      "title": "Vanguard",
+      "description": "The permission layer for sovereign AI agents — intercepting API calls, enforcing zero-trust gating, and managing Auth0 Token Vaults.",
+      "longDescription": "Vanguard is a secure intermediary layer designed for the AI era. It intercepts every action an autonomous AI agent attempts, evaluates it against a permission intelligence engine, and securely executes external APIs using Auth0 for identity and a Vault-based token access model.\n\nBy transforming AI systems from execution-first to control-first, Vanguard eliminates uncontrolled API actions. High-risk actions require user approval via mobile push alerts, and sensitive tokens (Gmail, Slack) are never exposed to the agent.",
+      "impact": "Shifts AI agent security from implicit trust to explicit zero-trust control, with real-time push approvals and immutable audit trails.",
+      "features": [
+        "Auth0-Powered Token Vault & M2M Authentication",
+        "Real-Time Permission Intelligence & Risk-Based Gating",
+        "Interactive Mobile Push Approvals (Allow Once / Always / Deny)",
+        "Zero-Trust Execution Layer Shielding API Tokens from LLMs",
+        "Comprehensive Decision Audit Logs & Traceability"
+      ],
+      "image": "/images/vanguard/cover-showcase.png",
+      "gallery": [
+        "/images/vanguard/cover-showcase.png",
+        "/images/vanguard/dashboard.png",
+        "/images/vanguard/dashboard-1.png",
+        "/images/vanguard/login-web.png",
+        "/images/vanguard/pending-permissions.png",
+        "/images/vanguard/permissions.png",
+        "/images/vanguard/logs.png"
+      ],
+      "technologies": [
+        "React Native",
+        "Expo",
+        "NativeWind",
+        "NestJS",
+        "TypeScript",
+        "Auth0",
+        "GPT-4o-mini"
+      ],
+      "githubLink": "https://github.com/nisar7988/vanguard",
+      "link": "",
+      "videoUrl": "",
+      "apkLink": "",
+      "architecture": {
+        "stateManagement": "React Native state combined with Expo notifications listener for handling real-time permission requests, rule escalation, and action approvals.",
+        "backendStructure": "Modular NestJS architecture dividing the permission engine, Auth0 token vault gateway, external proxy dispatchers, and audit log persistence.",
+        "apiDesign": "Secure proxy endpoints intercepting agent action payloads, evaluating risk scores, and generating step-up approval triggers.",
+        "authentication": "Enterprise-grade Auth0 PKCE flow on mobile with M2M client credential grants and scoped token issuance via Token Vault.",
+        "deployment": "NestJS backend hosted as Docker containers; mobile app distributed via Expo Application Services (EAS)."
+      }
+    },
+    {
+      "id": 7,
+      "featured": false,
+      "title": "LiveQuiz AI",
+      "description": "An AI-powered YouTube Live quiz & audience polling platform enabling streamers to run interactive chat polls with live leaderboards.",
+      "longDescription": "LiveQuiz AI is an interactive platform built for content creators, educators, and live streamers on YouTube. Hosts can dynamically generate quizzes from any topic using AI, run each question as an A–D YouTube Live Chat poll, reveal explanations, and review session feedback.\n\nThe system polls YouTube chat messages in real time, deduplicates voters, tallies votes dynamically, and maintains cumulative participant scores on an interactive live leaderboard.",
+      "impact": "Boosts live stream audience engagement by automating real-time YouTube chat polling and leaderboard gamification.",
+      "features": [
+        "Dynamic AI Quiz Generation by Topic",
+        "Official YouTube Live Chat API & Broadcast Detection",
+        "Real-Time Chat Message Ingestion & Deduplicated Tallying",
+        "Interactive Live Leaderboard & Score Persistence",
+        "OBS Stream Overlay Mode for Live Broadcasting"
+      ],
+      "image": "/images/livequiz/livequiz-1.png",
+      "gallery": [
+        "/images/livequiz/livequiz-1.png",
+        "/images/livequiz/livequiz-2.png",
+        "/images/livequiz/livequiz-3.png"
+      ],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Node.js",
+        "Express",
+        "YouTube Live Chat API",
+        "Google OAuth 2.0"
+      ],
+      "githubLink": "https://github.com/nisar7988/live-polling",
+      "link": "",
+      "videoUrl": "",
+      "apkLink": "",
+      "architecture": {
+        "stateManagement": "Lightweight client state with polling status intervals synchronized against backend poll state machines.",
+        "backendStructure": "Express server coordinating OAuth token refreshes, broadcast detection, YouTube chat polling intervals, and session history.",
+        "apiDesign": "REST endpoints for poll initiation, status polling, and score settlement with YouTube Live Chat API integrations.",
+        "authentication": "Google OAuth 2.0 with offline refresh tokens for long-running live broadcast permissions.",
+        "deployment": "Client deployable on Vercel or packaged with Electron for desktop; Node server deployable on Render or Railway."
+      }
+    },
+    {
+      "id": 8,
+      "featured": false,
+      "title": "ChangeGuard",
+      "description": "Evidence-first regression reviewer for AI-generated JS/TS diffs — epistemic separation of verifiable facts from model hypotheses.",
+      "longDescription": "ChangeGuard is a high-speed, client-side regression detection and evidence analysis tool designed to inspect AI-generated pull requests and diffs.\n\nAI coding agents frequently take silent shortcuts when tests fail—such as deleting assertions, swallowing errors in empty catch blocks, or skipping test cases. ChangeGuard acts as an objective referee by enforcing an epistemic boundary: extracting deterministic AST facts and separating verifiable code changes from unverified model hypotheses.",
+      "impact": "Prevents silent AI regression risks with 100% deterministic, zero-hallucination diff analysis directly in the browser.",
+      "features": [
+        "Deterministic AST-Based Assertion & Error Swallowing Checks",
+        "Epistemic Separation of Visible Facts vs. LLM Hypotheses",
+        "Instant Client-Side Evaluation with Zero Server Roundtrips",
+        "Support for Unified Git Diffs and Multi-File Reviews",
+        "Built-in Test Suite with 48+ Regression Scenarios"
+      ],
+      "image": "/images/changeguard/changeguard.png",
+      "gallery": [
+        "/images/changeguard/changeguard.png"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Preact",
+        "Vite",
+        "Vitest",
+        "AST Parsing",
+        "Tailwind CSS"
+      ],
+      "githubLink": "https://github.com/nisar7988/changeguard",
+      "link": "",
+      "videoUrl": "",
+      "apkLink": ""
+    },
+    {
+      "id": 9,
+      "featured": true,
+      "title": "Academic Atelier",
+      "description": "A modern School ERP & Student Portal streamlining academic operations, attendance tracking, schedules, and fee management.",
+      "longDescription": "Academic Atelier (EduPortal) is a comprehensive academic ERP platform designed for students, teachers, and administrators. Built with Expo, React Native, and React, it provides role-specific dashboards to view real-time class timetables, track attendance metrics, manage fee balances with instant breakdowns, and interact with an integrated AI chat support system.\n\nThe system bridges administrative workflows with clean, responsive interfaces across mobile and web platforms, empowering educational institutions with transparent, automated operational oversight.",
+      "impact": "Improved academic efficiency, real-time insights, automated fee handling, and streamlined communication for students and faculty.",
+      "features": [
+        "Centralized Academic Dashboard for Students & Faculty",
+        "Smart Weekly Timetables & Class Lecture Tracking",
+        "Real-Time Attendance Monitoring & Detailed Analytics",
+        "Transparent Fee Breakdown, Due Alerts & Payments",
+        "Interactive AI Chat Support for Academic Assistance",
+        "Role-Based Navigation & Secure Profile Management"
+      ],
+      "image": "/images/erp-app/cover.png",
+      "gallery": [
+        "/images/erp-app/cover.png",
+        "/images/erp-app/home.png",
+        "/images/erp-app/schedule.png",
+        "/images/erp-app/attendance.png",
+        "/images/erp-app/fee.png",
+        "/images/erp-app/chat-support.png",
+        "/images/erp-app/profile.png"
+      ],
+      "technologies": [
+        "React Native",
+        "Expo",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Node.js",
+        "Chart.js"
+      ],
+      "githubLink": "https://github.com/nisar7988/erp-app",
+      "link": "https://school-erp-frontend-nine.vercel.app",
+      "videoUrl": "",
+      "apkLink": "",
+      "architecture": {
+        "stateManagement": "Redux Toolkit combined with custom query hooks for managing global session state, offline-first timetable caching, attendance records, and conversational AI chat streams.",
+        "backendStructure": "Modular layered architecture dividing role-based route guards, academic scheduling controllers, invoice computation services, and relational database schemas.",
+        "apiDesign": "RESTful endpoints providing institutional authentication, student record retrieval, attendance tally computations, and streamed chat completions.",
+        "authentication": "Institutional JWT credentials enforcing strict role-based access control (RBAC) to separate student and faculty data access.",
+        "deployment": "Mobile application deployed through Expo Application Services (EAS); web portal deployed on Vercel with automated CI/CD."
+      }
     }
   ]
 }
